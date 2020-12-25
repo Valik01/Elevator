@@ -72,19 +72,19 @@ namespace ElevatorSystem
 
             Lift lift = Lift.getInstance(0, 0, 0, new int[] { 0, 0 });
 
-            if (positionX < lengthFloor && !moveInLift && !exitFloor)
+            if (positionX < lengthFloor && !moveInLift && !exitFloor) //движется от двери к лифту
             {
                 positionX_old = positionX;
                 positionY_old = positionY;
                 positionX += speedX;
             }
-            else if (!wait && !moveInLift && !exitFloor)
+            else if (!wait && !moveInLift && !exitFloor) //ожидает лифта на своем этаже
             {
                 wait = true;
                 status = "Ждёт на этаже " + (numberFloor[0] + 1);
                 lift.callTheElevator(numberFloor[0], numberFloor[1]);
             }
-            else if (numberFloor[0] == lift.CurrentFloor && !moveInLift && !exitFloor && lift.Weight < 400)
+            else if (numberFloor[0] == lift.CurrentFloor && !moveInLift && !exitFloor && lift.Weight < 400) //едет в лифте
             {
                 enable = false;
                 moveInLift = true;
@@ -94,7 +94,7 @@ namespace ElevatorSystem
                 status = "Движется на нужный этаж";
                 lift.moveTheElevator(numberFloor[0]);
             }
-            else if (numberFloor[1] == lift.CurrentFloor && moveInLift && !exitFloor)
+            else if (numberFloor[1] == lift.CurrentFloor && moveInLift && !exitFloor) //выходит из лифта 
             {
                 enable = true;
                 exitFloor = true;
@@ -103,15 +103,13 @@ namespace ElevatorSystem
                 lift.MoveUp = false;
                 status = "Выходит на этаже " + (numberFloor[1] + 1);
                 lift.exitTheElevator(numberFloor[1]);
-            } else if (exitFloor) 
+            } else if (exitFloor) //движется к двери после выхода из лифта
             {
                 positionX_old = positionX;
                 positionY_old = positionY;
                 positionX -= speedX;
             }
-
-            return enable;
-                
+            return enable;               
         }
 
        

@@ -47,7 +47,7 @@ namespace ElevatorSystem
             // 
             // buttonCreat
             // 
-            this.buttonCreat.Location = new System.Drawing.Point(116, 2);
+            this.buttonCreat.Location = new System.Drawing.Point(1, 78);
             this.buttonCreat.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCreat.Name = "buttonCreat";
             this.buttonCreat.Size = new System.Drawing.Size(110, 72);

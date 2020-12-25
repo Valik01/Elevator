@@ -8,7 +8,6 @@ namespace ElevatorSystem
 {
     class Program
     {
-
         [STAThread]
         static void Main()
         {
@@ -16,8 +15,5 @@ namespace ElevatorSystem
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
         }
-
-       
-
     }
 }

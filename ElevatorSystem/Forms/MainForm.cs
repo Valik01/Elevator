@@ -128,9 +128,6 @@ namespace ElevatorSystem
                     persons.Add(person);
                 }
             } catch (Exception ignore){ }
-            
-            
-
         }
 
         public void createBuild()
@@ -303,8 +300,6 @@ namespace ElevatorSystem
                     }
                 }
             }
-
-
         }
     }
 }
