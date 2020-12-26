@@ -277,8 +277,8 @@ namespace ElevatorSystem
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyValue == (char)Keys.Space) 
-            {
+            if (e.KeyValue == (char)Keys.Space)
+            { 
                 lift.showInfo();
             }
         }

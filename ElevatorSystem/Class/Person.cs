@@ -84,7 +84,7 @@ namespace ElevatorSystem
                 status = "Ждёт на этаже " + (numberFloor[0] + 1);
                 lift.callTheElevator(numberFloor[0], numberFloor[1]);
             }
-            else if (numberFloor[0] == lift.CurrentFloor && !moveInLift && !exitFloor && lift.Weight < 400) //едет в лифте
+            else if (numberFloor[0] == lift.CurrentFloor && !moveInLift && !exitFloor && lift.Weight + weight < 400) //едет в лифте
             {
                 enable = false;
                 moveInLift = true;

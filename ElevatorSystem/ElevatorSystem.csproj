@@ -100,8 +100,6 @@
     <Compile Include="Forms\PersonInformation.Designer.cs">
       <DependentUpon>PersonInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="IntCompareDown.cs" />
-    <Compile Include="IntCompare.cs" />
     <Compile Include="PersonStatus.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
